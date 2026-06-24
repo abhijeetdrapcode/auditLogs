@@ -15,7 +15,7 @@ timestamp=$(date +"%H_%M_%S")
 output_file="$output_directory/audit_${timestamp}.json"
 audit_log_file="$log_directory/audit.json"
 
-if ! sudo test -f "$audit_log_file"; then
+if ! sudo /usr/bin/test -f "$audit_log_file"; then
     echo "Error: audit.json not found in $log_directory"
     exit 1
 fi
